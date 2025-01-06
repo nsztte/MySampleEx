@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace MySampleEx
 {
@@ -10,7 +12,8 @@ namespace MySampleEx
     public class BaseData : ScriptableObject
     {
         #region Variables
-        public string[] names;
+        //public string[] names;
+        public List<string> names;
         public const string DataDirectory = "/ResourcesData/Resources/Data/";
         #endregion
 
@@ -23,7 +26,7 @@ namespace MySampleEx
             if (names == null)
                 return 0;
 
-            return names.Length;
+            return names.Count;
         }
 
         //틀에 출력하기 위해 이름 목록 리스트 얻어오기
