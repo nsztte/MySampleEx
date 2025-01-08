@@ -62,6 +62,7 @@ namespace MySampleEx
             if(this.effectPrefab != null)
             {
                 GameObject effectGo = GameObject.Instantiate(effectPrefab, position, Quaternion.identity);
+                return effectGo;
             }
 
             return null;
